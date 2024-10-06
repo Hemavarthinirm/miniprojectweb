@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nail Disease Detection - Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7fafc;
+            margin: 0;
+            padding: 1rem;
+        }
+        *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+        box-sizing: border-box;
+        outline: none;
+        border: none;
+        text-decoration: none;
+        text-transform: capitalize;
+        transition: all .2s linear;
+        }
+
+        html,body{
+            height: 100%;
+            width: 100%;
+        }
+
+        nav{
+            padding: 10px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #3498db;
+            position: relative;
+            height: 70px;
+            width: 100%;
+        }
+
+        .logo{
+            color: #fff;
+        }
+
+        nav ul{
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        nav ul li{
+            list-style-type: none;
+        }
+
+        nav ul li a{
+            text-decoration: none;
+            color:#fff ;
+            font-size:18px; 
+            position: relative;
+            transition: 0.5s;
+        }
+        nav ul li a:hover{
+            color:#ccc;
+        }
+        nav ul li a::after{
+            content: "";
+            background-color: #fff;
+            width: 0;
+            position: absolute;
+            height: 0.2rem;
+            left: 0;
+            margin-top: 0.5rem;
+            top: 100%;
+            transition: 0.5s;
+        }
+        nav ul li a:hover::after{
+            width: 100%;
+        }
+
+        .menu-icon{
+            display: none;
+        }
+
+        .menu-icon i{
+            color: #fff;
+            font-size: 30px;
+        }
+
+        @media (max-width:600px) {
+            nav ul{
+                position: absolute;
+                top: 70px;
+                right: 0;
+                flex-direction: column;
+                text-align: center;
+                background: #3498db;
+                gap: 0;
+                overflow: hidden;
+                width:300px;
+                
+            }
+            nav ul li{
+                padding: 20px;
+                padding-top: 0;
+            }
+            .menu-icon{
+                display: block;
+            }
+            #menuList{
+                transition: all 0.5s;
+            }
+}
+
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .header h1 {
+            font-size: 2rem;
+            color: #606fc7;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .feature-card {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .feature-card i {
+            font-size: 2rem;
+            color: #606fc7;
+            margin-bottom: 0.5rem;
+        }
+        .feature-card h2 {
+            font-size: 1.25rem;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+        .feature-card p {
+            font-size: 1rem;
+            color: #666;
+        }
+        .btn-primary {
+            background-color: #606fc7;
+            color: white;
+            padding: 0.75rem;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        .btn-primary:hover {
+            background-color: #4c51bf;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+          <h1>Nail disease Detection</h1>
+        </div>
+        <ul id="menuList">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html">Appointments</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="login.html">About</a></li>
+        </ul>
+        <div class="menu-icon">
+          <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+        </div>
+      </nav>
+    <div class="header">
+        <h1>Welcome to Nail Disease Detection App</h1>
+    </div>
+    <div class="features-grid">
+        <div class="feature-card">
+            <i class="fas fa-calendar-check"></i>
+            <h2>Book Doctor Appointment</h2>
+            <p>Find and book appointments with nearby doctors to treat your nail disease.</p>
+            <button class="btn-primary">Book Now</button>
+        </div>
+        <div class="feature-card">
+            <i class="fas fa-upload"></i>
+            <h2>Upload Nail Image</h2>
+            <p>Upload images to scan and detect potential nail diseases.</p>
+            <button class="btn-primary">Upload Image</button>
+        </div>
+        <div class="feature-card">
+            <i class="fas fa-heartbeat"></i>
+            <h2>Health Condition Analysis</h2>
+            <p>Check the severity of your nail condition if left untreated for a week.</p>
+            <button class="btn-primary">Analyze Now</button>
+        </div>
+        <div class="feature-card">
+            <i class="fas fa-info-circle"></i>
+            <h2>Learn About Nail Diseases</h2>
+            <p>Get detailed information on different types of nail diseases.</p>
+            <button class="btn-primary">Learn More</button>
+        </div>
+    </div>
+</body>
+</html>
